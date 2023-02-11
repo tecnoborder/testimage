@@ -27,7 +27,7 @@
       function updateImage() {
         const currentTime = getCurrentTime();
         let currentImage;
-        if (currentTime >= "00:00" && currentTime < "09:00") {
+        if (currentTime >= "08:00" && currentTime < "09:00") {
           currentImage = "1.png";
         } else if (currentTime >= "09:00" && currentTime < "12:00") {
           currentImage = "2.png";
@@ -41,7 +41,9 @@
           currentImage = "3.png";
         } else if (currentTime >= "20:30" && currentTime < "21:30") {
           currentImage = "5.png";
-        } else if (currentTime >= "21:30" || currentTime < "23:59") {
+        } else if (currentTime >= "21:30" || currentTime < "00:00") {
+          currentImage = "6.png";
+        } else if (currentTime >= "00:00" || currentTime < "08:00") {
           currentImage = "6.png";
         }
 
